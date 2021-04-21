@@ -6,11 +6,11 @@
 
 part1
 <br>
-First click to contact button
+First click to contacts button
 ![Screenshot 2021-04-21 185803](https://user-images.githubusercontent.com/56447709/115600472-0a58dc80-a2dd-11eb-9d7d-ce76cb0e87d0.png)
 part2
 <br>
-After click to plus button for new contact
+After click to plus button for new contacts
 ![Screenshot 2021-04-21 185803](https://user-images.githubusercontent.com/56447709/115600472-0a58dc80-a2dd-11eb-9d7d-ce76cb0e87d0.png)
 part3
 
@@ -18,10 +18,9 @@ part3
 part4
 You can write any name,number for edit button.
 ![Screenshot 2021-04-21 210233](https://user-images.githubusercontent.com/56447709/115607250-0c269e00-a2e5-11eb-9d08-8e34dd2ac917.png)
-part5
 
-![Screenshot 2021-04-21 185803](https://user-images.githubusercontent.com/56447709/115600472-0a58dc80-a2dd-11eb-9d7d-ce76cb0e87d0.png)
 part6
+Finally click to save button. Also you can delete and add to favourite side your contacts
 ![Screenshot 2021-04-21 210233](https://user-images.githubusercontent.com/56447709/115607485-560f8400-a2e5-11eb-8a86-1c0cc86dc3f7.png)
 
 

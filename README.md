@@ -5,12 +5,12 @@
 <br>
 
 <h2>part1</h2>
-<br>
+
 <h2>Firstly you should select contact button</h2>
   
 ![Screenshot 2021-04-21 185803](https://user-images.githubusercontent.com/56447709/115600472-0a58dc80-a2dd-11eb-9d7d-ce76cb0e87d0.png)
 <h2>part2</h2>
-<br>
+
 <h2>Then click to plus button for new contacts</h2>
 
 ![Screenshot 2021-04-21 185803](https://user-images.githubusercontent.com/56447709/115600472-0a58dc80-a2dd-11eb-9d7d-ce76cb0e87d0.png)

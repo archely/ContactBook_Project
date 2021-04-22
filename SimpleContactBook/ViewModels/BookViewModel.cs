@@ -21,8 +21,8 @@ namespace SimpleContactBook.ViewModels
             set { OnPropertyChanged(ref _contactsVM, value); }
         }
 
-        public ICommand LoadContactsCommand { get; private set; }
-        public ICommand LoadFavoritesCommand { get; private set; }
+        public ICommand LoadContactsCommand { get; set; }
+        public ICommand LoadFavoritesCommand { get; set; }
 
         public BookViewModel(IContactDataService dataService, IDialogService dialogService)
         {

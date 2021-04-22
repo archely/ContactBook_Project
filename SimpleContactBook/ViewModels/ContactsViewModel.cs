@@ -36,14 +36,14 @@ namespace SimpleContactBook.ViewModels
             get { return !_isEditMode; }
         }
 
-        public ObservableCollection<Contact> Contacts { get; private set; }
+        public ObservableCollection<Contact> Contacts { get; set; }
 
-        public ICommand EditCommand { get; private set; }
-        public ICommand SaveCommand { get; private set; }
-        public ICommand UpdateCommand { get; private set; }
-        public ICommand BrowseImageCommand { get; private set; }
-        public ICommand AddCommand { get; private set; }
-        public ICommand DeleteCommand { get; private set; }
+        public ICommand EditCommand { get;  set; }
+        public ICommand SaveCommand { get;  set; }
+        public ICommand UpdateCommand { get;  set; }
+        public ICommand BrowseImageCommand { get;  set; }
+        public ICommand AddCommand { get;  set; }
+        public ICommand DeleteCommand { get;  set; }
 
         private IContactDataService _dataService;
         private IDialogService _dialogService;

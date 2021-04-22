@@ -17,26 +17,26 @@ namespace SimpleContactBook.Services
             {
                 new Contact
                 {
-                    Name = "John Doe",
+                    Name = "Arda Burak Atila",
                     PhoneNumbers = new string[]
                     {
-                        "555-111-1111",
-                        "555-222-2222"
+                        "334-434-343-43",
+                        "334-434-343-43"
                     },
                     Emails = new string[]
                     {
-                        "Johndoe@personal.com",
-                        "Johndoe@business.com"
+                        "arda_atila@hotmail.com",
+                        "arda_atila@hotmail.com"
                     },
                     Locations = new string[]
                     {
-                        "111 Fake Street",
-                        "222 Fake Ave"
+                        "344 Example",
+                        "7644 er"
                     }
                 },
                 new Contact
                 {
-                    Name = "Jane Doe",
+                    Name = "Arda Burak Atila",
                     PhoneNumbers = new string[]
                     {
                         "555-333-3333",
@@ -44,13 +44,13 @@ namespace SimpleContactBook.Services
                     },
                     Emails = new string[]
                     {
-                        "Janedoe@personal.com",
-                        "Janedoe@business.com"
+                        "arda_atila@hotmail.com",
+                        "arda_atila@hotmail.com"
                     },
                     Locations = new string[]
                     {
-                        "111 Fake Street",
-                        "333 Fake Ave"
+                        "111 Example street",
+                        "43 example Ave"
                     }
                 },
             };

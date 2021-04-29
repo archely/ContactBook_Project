@@ -7,17 +7,20 @@ using SimpleContactBook.Models;
 
 namespace SimpleContactBook.Services
 {
-    public class MockDataService : IContactDataService
+    /// <summary>
+    /// Service for mock data service.
+    /// </summary>
+    public class MockDataService : IContactDataService //Add some Sample data
     {
-        private IEnumerable<Contact> _contacts;
+        private IEnumerable<Contact> _contacts; // Exposes enumerator
 
         public MockDataService()
         {
             _contacts = new List<Contact>()
             {
-                new Contact
+                new Contact 
                 {
-                    Name = "Arda Burak Atila",
+                    Name = "Arda Burak Atila", 
                     PhoneNumbers = new string[]
                     {
                         "334-434-343-43",

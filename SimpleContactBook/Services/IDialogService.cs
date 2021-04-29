@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleContactBook.Services
 {
-    public interface IDialogService
+
+    public interface IDialogService 
     {
         string OpenFile(string filter);
         void ShowMessageBox(string message);

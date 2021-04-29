@@ -9,11 +9,16 @@ using SimpleContactBook.Models;
 
 namespace SimpleContactBook.Services
 {
+
+    /// <summary>
+    /// Services for contact data services
+    /// </summary>
+    
     public class JsonContactDataService : IContactDataService
     {
-        private readonly string _dataPath = "Resources/contactdata.json";
+        private readonly string _dataPath = "Resources/contactdata.json"; // From resources folder
 
-        public IEnumerable<Contact> GetContacts()
+        public IEnumerable<Contact> GetContacts() 
         {
             if(!File.Exists(_dataPath))
             {

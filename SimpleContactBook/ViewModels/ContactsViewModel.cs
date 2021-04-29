@@ -11,9 +11,13 @@ using System.Windows.Input;
 
 namespace SimpleContactBook.ViewModels
 {
+    /// <summary>
+    /// View model for the contact View.
+    /// </summary>
+    
     public class ContactsViewModel : ObservableObject
     {
-        private Contact _selectedContact;
+        private Contact _selectedContact; 
         public Contact SelectedContact
         {
             get { return _selectedContact; }
@@ -38,12 +42,12 @@ namespace SimpleContactBook.ViewModels
 
         public ObservableCollection<Contact> Contacts { get; set; }
 
-        public ICommand EditCommand { get;  set; }
-        public ICommand SaveCommand { get;  set; }
-        public ICommand UpdateCommand { get;  set; }
-        public ICommand BrowseImageCommand { get;  set; }
-        public ICommand AddCommand { get;  set; }
-        public ICommand DeleteCommand { get;  set; }
+        public ICommand EditCommand { get;  set; } //Get edit command
+        public ICommand SaveCommand { get;  set; } //Get save command
+        public ICommand UpdateCommand { get;  set; } //Get Update command
+        public ICommand BrowseImageCommand { get;  set; } // Get browse image command
+        public ICommand AddCommand { get;  set; } // Get add command
+        public ICommand DeleteCommand { get;  set; } // Get delete command
 
         private IContactDataService _dataService;
         private IDialogService _dialogService;
@@ -53,12 +57,12 @@ namespace SimpleContactBook.ViewModels
             _dataService = dataService;
             _dialogService = dialogService;
 
-            EditCommand = new RelayCommand(Edit, CanEdit);
-            SaveCommand = new RelayCommand(Save, IsEdit);
-            UpdateCommand = new RelayCommand(Update);
-            BrowseImageCommand = new RelayCommand(BrowseImage, IsEdit);
-            AddCommand = new RelayCommand(Add);
-            DeleteCommand = new RelayCommand(Delete, CanDelete);
+            EditCommand = new RelayCommand(Edit, CanEdit); // Add edit
+            SaveCommand = new RelayCommand(Save, IsEdit); // Add save command
+            UpdateCommand = new RelayCommand(Update); // Add update command
+            BrowseImageCommand = new RelayCommand(BrowseImage, IsEdit); // Add browser command ,you can choose any picture from your computer
+            AddCommand = new RelayCommand(Add); // Add add command
+            DeleteCommand = new RelayCommand(Delete, CanDelete); // Delete command, you can delete your contacts
         }
 
         private void Delete()
@@ -74,7 +78,7 @@ namespace SimpleContactBook.ViewModels
 
         private void Add()
         {
-            var newContact = new Contact
+            var newContact = new Contact  // Created new contact, empty bars (phone numbers, emails,location)
             {
                 Name = "N/A",
                 PhoneNumbers = new string[2],
@@ -92,24 +96,24 @@ namespace SimpleContactBook.ViewModels
             SelectedContact.ImagePath = filePath;
         }
 
-        private void Update()
+        private void Update() // Saves to dataservice file 
         {
             _dataService.Save(Contacts);
         }
 
-        private void Save()
+        private void Save() //Save button
         {
             _dataService.Save(Contacts);
             IsEditMode = false;
             OnPropertyChanged("SelectedContact");
         }
 
-        private bool IsEdit()
+        private bool IsEdit() //Call the edit 
         {
             return IsEditMode;
         }
 
-        private bool CanEdit()
+        private bool CanEdit()  
         {
             if (SelectedContact == null)
                 return false;

@@ -9,6 +9,10 @@ using System.Windows.Input;
 
 namespace SimpleContactBook.ViewModels
 {
+    /// <summary>
+    /// View model for the Book View Model.
+    /// </summary>
+    
     public class BookViewModel : ObservableObject
     {
         private IContactDataService _dataService;
@@ -21,7 +25,7 @@ namespace SimpleContactBook.ViewModels
             set { OnPropertyChanged(ref _contactsVM, value); }
         }
 
-        public ICommand LoadContactsCommand { get; set; }
+        public ICommand LoadContactsCommand { get; set; } 
         public ICommand LoadFavoritesCommand { get; set; }
 
         public BookViewModel(IContactDataService dataService, IDialogService dialogService)

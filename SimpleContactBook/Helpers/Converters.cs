@@ -9,6 +9,9 @@ using System.Windows.Data;
 
 namespace SimpleContactBook.Helpers
 {
+    /// <summary>
+    /// Helpers for the Boolean to visibility converter
+    /// </summary>
     public class BoolToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

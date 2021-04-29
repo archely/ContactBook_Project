@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace SimpleContactBook.Services
 {
+    /// <summary>
+    /// Services for the window dialog service
+    /// </summary>
     public class WindowDialogService : IDialogService
     {
         public string OpenFile(string filter)

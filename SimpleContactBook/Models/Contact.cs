@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace SimpleContactBook.Models
 {
+    /// <summary>
+    /// Model for the address book contact side.
+    /// </summary>
+    
     public class Contact : ObservableObject
     {
+        
         private string _name;
         public string Name
         {
-            get { return _name; }
+            get { return _name; } // 
             set { OnPropertyChanged(ref _name, value); }
         }
 

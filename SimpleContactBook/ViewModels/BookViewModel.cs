@@ -28,13 +28,13 @@ namespace SimpleContactBook.ViewModels
         public ICommand LoadContactsCommand { get; set; } 
         public ICommand LoadFavoritesCommand { get; set; }
 
-        public BookViewModel(IContactDataService dataService, IDialogService dialogService)
+        public BookViewModel(IContactDataService dataService, IDialogService dialogService) // Load contact and favorite side from dataService
         {
             ContactsVM = new ContactsViewModel(dataService, dialogService);
 
             _dataService = dataService;
 
-            LoadContactsCommand = new RelayCommand(LoadContacts);
+            LoadContactsCommand = new RelayCommand(LoadContacts); 
             LoadFavoritesCommand = new RelayCommand(LoadFavorites);
         }
 

@@ -13,16 +13,21 @@ namespace SimpleContactBook.ViewModels
     /// View model for the Book View Model.
     /// </summary>
     
-    public class BookViewModel : ObservableObject
+    public class BookViewModel : ObservableObject 
     {
+
+        /// <summary>
+        /// Every contacts save to database. Database provide to separate favourite and normal contacts
+        /// </summary>
+
         private IContactDataService _dataService;
         private IDialogService _dialogService;
 
-        private ContactsViewModel _contactsVM;
-        public ContactsViewModel ContactsVM
+        private ContactsViewModel _contactsVM; // VM is View Model
+        public ContactsViewModel ContactsVM 
         {
             get { return _contactsVM; }
-            set { OnPropertyChanged(ref _contactsVM, value); }
+            set { OnPropertyChanged(ref _contactsVM, value); } 
         }
 
         public ICommand LoadContactsCommand { get; set; } 

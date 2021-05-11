@@ -11,16 +11,19 @@ namespace SimpleContactBook.Services
 {
 
     /// <summary>
-    /// Services for contact data services
+    /// Services for contact data services. Add Newtonsoft_Json
     /// </summary>
     
     public class JsonContactDataService : IContactDataService
     {
+        /// <summary>
+        /// Convert for json format
+        /// </summary>
         private readonly string _dataPath = "Resources/contactdata.json"; // From resources folder
 
-        public IEnumerable<Contact> GetContacts() 
+        public IEnumerable<Contact> GetContacts() // Enumerator
         {
-            if(!File.Exists(_dataPath))
+            if(!File.Exists(_dataPath))  // Check file
             {
                 File.Create(_dataPath).Close();
             }

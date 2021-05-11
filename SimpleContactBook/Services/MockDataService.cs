@@ -16,7 +16,7 @@ namespace SimpleContactBook.Services
 
         public MockDataService()
         {
-            _contacts = new List<Contact>()
+            _contacts = new List<Contact>() // Contact list
             {
                 new Contact 
                 {
@@ -37,7 +37,7 @@ namespace SimpleContactBook.Services
                         "7644 er"
                     }
                 },
-                new Contact
+                new Contact  // Second Contact
                 {
                     Name = "Arda Burak Atila",
                     PhoneNumbers = new string[]
@@ -64,7 +64,7 @@ namespace SimpleContactBook.Services
             return _contacts;
         }
 
-        public void Save(IEnumerable<Contact> contacts)
+        public void Save(IEnumerable<Contact> contacts)  
         {
             _contacts = contacts;
         }

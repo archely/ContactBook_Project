@@ -13,11 +13,14 @@ namespace SimpleContactBook.Models
     
     public class Contact : ObservableObject
     {
+        /// <summary>
+        /// Some models for contacts. Etc name, phone number, emails, locations
+        /// </summary>
         
         private string _name;
         public string Name
         {
-            get { return _name; } // 
+            get { return _name; }  
             set { OnPropertyChanged(ref _name, value); }
         }
 

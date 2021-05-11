@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 namespace SimpleContactBook.Utilty
 {
 
-    /// <summary>
-    /// Utility for the observable object
-    /// </summary>
+
     public class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

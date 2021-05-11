@@ -5,10 +5,6 @@ using SimpleContactBook.ViewModels;
 namespace SimpleContactBook
 {
 
-    /// <summary>
-    /// App View Model 
-    /// </summary>
-    /// 
     public class AppViewModel : ObservableObject
     {
         private object _currentView;

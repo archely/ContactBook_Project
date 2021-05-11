@@ -17,6 +17,10 @@ namespace SimpleContactBook.ViewModels
     
     public class ContactsViewModel : ObservableObject
     {
+
+        /// <summary>
+        /// You can find edit, delete, add functions
+        /// </summary>
         private Contact _selectedContact; 
         public Contact SelectedContact
         {
@@ -52,7 +56,7 @@ namespace SimpleContactBook.ViewModels
         private IContactDataService _dataService;
         private IDialogService _dialogService;
 
-        public ContactsViewModel(IContactDataService dataService, IDialogService dialogService)
+        public ContactsViewModel(IContactDataService dataService, IDialogService dialogService) // Connect to database
         {
             _dataService = dataService;
             _dialogService = dialogService;
@@ -65,8 +69,11 @@ namespace SimpleContactBook.ViewModels
             DeleteCommand = new RelayCommand(Delete, CanDelete); // Delete command, you can delete your contacts
         }
 
-        private void Delete()
+        private void Delete() // Remove contact from list
         {
+
+            
+
             Contacts.Remove(SelectedContact);
             Save();
         }
@@ -76,7 +83,7 @@ namespace SimpleContactBook.ViewModels
             return SelectedContact == null ? false : true;
         }
 
-        private void Add()
+        private void Add() // New contact you can edit it.
         {
             var newContact = new Contact  // Created new contact, empty bars (phone numbers, emails,location)
             {

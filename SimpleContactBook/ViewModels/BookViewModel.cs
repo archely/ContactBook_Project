@@ -27,7 +27,7 @@ namespace SimpleContactBook.ViewModels
         public ContactsViewModel ContactsVM 
         {
             get { return _contactsVM; }
-            set { OnPropertyChanged(ref _contactsVM, value); } 
+            set { OnPropertyChanged(ref _contactsVM, value); } // This function in utilities folder
         }
 
         public ICommand LoadContactsCommand { get; set; } 
